@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Jyre Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Challenge: Exploring the 9 Leader Types
 
-## Available Scripts
+We'd like you to build a simple UI in Javascript or Typescript (using a front-end framework of your choice) that displays information on Jyre's 9 Leader types. You'll need to retrieve the information to be displayed from Prismic, a headless CMS which we use to host content and make our platform extensible.
 
-In the project directory, you can run:
+ 
 
-### `npm start`
+### Here are the requirements:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The purpose of this initial UI is to present information for a user who is interested in finding out more about the different Jyre Leader types.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Your UI should make use of Prismic at runtime, so that changes to the content are reflected on refresh.
 
-### `npm test`
+Your UI should use all of the information available in Prismic, including colours, images, and text.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your UI should work well on both mobile and desktop.
 
-### `npm run build`
+You should focus on creating a UI that is clean and visually appealing to you - don't feel the need to copy the existing Jyre visual style.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You're welcome to include automated tests in your submission if you find it helps you to complete the challenge, but this isn't required/expected due to the limited scope.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+You should clean (no node_modules directories please), and share your submission (via email, link, Github, etc.), including all of the files required to build and run the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 
 
-### `npm run eject`
+The details for the Prismic repository and document you need to access via API are as follows:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- API endpoint: https://jyre-engineering-recruitment.prismic.io/api/v2 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Access token: MC5ZWmZRVEJJQUFDMEF4QmVF.Me-_vUfvv71QJAoT77-9Pe-_ve-_vXLvv71j77-977-9TTzvv73vv73vv73vv73vv70OXhFpdlDvv73vv70
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Document Type: leader-types
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Document UID: leaders
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Document ID: YZfDNxIAACkAw9oa 
