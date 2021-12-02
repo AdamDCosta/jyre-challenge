@@ -1,0 +1,15 @@
+@use "./assets/styles/mixins" as *;
+@use "./assets/styles/variables" as *;
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  // background-color: $color-white;
+  // background: rgb(192,18,36);
+  // background: linear-gradient(90deg, rgba(192,18,36,0.5) 3%, rgba(238,0.52,111,0.5) 17%, rgba(253,176,24,0.5) 36%, rgba(177,187,54,0.5) 56%, rgba(103,167,220,0.5) 78%, rgba(108,71,149,0.5) 97%);
+  background: rgb(243,11,111);
+  background: linear-gradient(90deg, rgba(243,11,111,0.5) 10%, rgba(238,238,238,0.5) 50%, rgba(177,187,54,0.5) 82%);
+}
+
+

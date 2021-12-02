@@ -1,0 +1,12 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.header {
+  width: 100%;
+  height: 25vh;
+  background-color: $color-dark;
+
+  &__title {
+    color: $color-white;
+  }
+}

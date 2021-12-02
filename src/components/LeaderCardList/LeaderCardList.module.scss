@@ -1,0 +1,20 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+
+.leaders {
+
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 80%;
+  
+  }
+}

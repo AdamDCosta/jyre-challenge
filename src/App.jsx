@@ -1,9 +1,11 @@
-import './App.scss';
+import styles from './App.module.scss';
 import Main from './containers/Main/Main';
+
 
 const App = () => {
   return (
-    <div className="App">
+    <div className={styles.app}>
+      
       <Main />
     </div>
   );
