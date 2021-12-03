@@ -67,12 +67,12 @@ const LeaderPage = (props) => {
     }
   }
 
-  const bestListJSX = leaderBestList.map(listItem => {
-    return <li>{listItem}</li>
+  const bestListJSX = leaderBestList.map((listItem, index) => {
+    return <li key={index + 1}>{listItem}</li>
   })
 
-  const darkListJSX = leaderDarkList.map(listItem => {
-    return <li>{listItem}</li>
+  const darkListJSX = leaderDarkList.map((listItem, index) => {
+    return <li key={index + 1}>{listItem}</li>
   })
 
   console.log(leaderBestTitle);
