@@ -1,2 +1,47 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/mixins" as *;
+
+.leader-page {
+  width: 100%;
+  background-color: $color-secondary;
+  min-height: 100vh;
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    
+    &--text {
+      
+      &-title {
+        font-size: 2rem;
+      }
+
+      &-quote {
+        font-style: italic;
+      }
+    }
+  }
+
+  img {
+    width: 75%;
+  }
+
+  &__character {
+    width: 80%;
+    
+  }
+
+  &__lists {
+    width: 75%;
+    height: auto;
+    column-count: 2;
+    
+    column-gap: 20px;
+    column-fill: auto;
+    margin: 0 auto;
+
+  }
+}
