@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
-import styles from "./Main.module.scss";
+import styles from "./Home.module.scss";
 import LeaderCardList from "../../components/LeaderCardList/LeaderCardList";
 import Header from "../../components/Header/Header";
 
