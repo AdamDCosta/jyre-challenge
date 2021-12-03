@@ -1,10 +1,18 @@
 import React from "react";
+import { useParams } from 'react-router-dom';
+import { types } from "sass";
 import styles from "./LeaderPage.module.scss";
 
 const LeaderPage = (props) => {
   const { leaders } = props;
 
-  
+  const { leaderName } = useParams();
+
+  const nameArray = leaders.types.map(types => {
+    return types.name[0].text === leaderName;
+  })
+
+  console.log(nameArray)
 
   const leaderColour = "props....color";
 
