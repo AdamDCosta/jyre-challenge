@@ -4,6 +4,8 @@ import styles from "./LeaderPage.module.scss";
 const LeaderPage = (props) => {
   const { leaders } = props;
 
+  
+
   const leaderColour = "props....color";
 
   return (

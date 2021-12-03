@@ -29,7 +29,9 @@ const Main = () => {
   return (
     <Fragment>
       {leaders ? <Header leaders={leaders} /> : null}
-      <main className={styles.main}>{leaders ? <LeaderCardList leaders={leaders} /> : null}</main>
+      <main className={styles.main}>
+        {leaders ? <LeaderCardList leaders={leaders} /> : null}
+      </main>
     </Fragment>
   );
 };
