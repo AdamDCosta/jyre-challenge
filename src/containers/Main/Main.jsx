@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from "react";
+import styles from "./Main.module.scss";
 import LeaderCardList from "../../components/LeaderCardList/LeaderCardList";
 import Header from "../../components/Header/Header";
 
@@ -27,8 +28,8 @@ const Main = () => {
 
   return (
     <Fragment>
-      <Header leaders={leaders} />
-      <main>{leaders ? <LeaderCardList leaders={leaders} /> : null}</main>
+      {leaders ? <Header leaders={leaders} /> : null}
+      <main className={styles.main}>{leaders ? <LeaderCardList leaders={leaders} /> : null}</main>
     </Fragment>
   );
 };
