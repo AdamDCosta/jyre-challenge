@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/jyre-challenge/static/css/main.7bc5b48d.chunk.css",
-    "main.js": "/jyre-challenge/static/js/main.c9a33801.chunk.js",
-    "main.js.map": "/jyre-challenge/static/js/main.c9a33801.chunk.js.map",
+    "main.css": "/jyre-challenge/static/css/main.a79bca01.chunk.css",
+    "main.js": "/jyre-challenge/static/js/main.b1896851.chunk.js",
+    "main.js.map": "/jyre-challenge/static/js/main.b1896851.chunk.js.map",
     "runtime-main.js": "/jyre-challenge/static/js/runtime-main.e0bbebc6.js",
     "runtime-main.js.map": "/jyre-challenge/static/js/runtime-main.e0bbebc6.js.map",
     "static/js/2.3a141e08.chunk.js": "/jyre-challenge/static/js/2.3a141e08.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.e131db1b.chunk.js": "/jyre-challenge/static/js/3.e131db1b.chunk.js",
     "static/js/3.e131db1b.chunk.js.map": "/jyre-challenge/static/js/3.e131db1b.chunk.js.map",
     "index.html": "/jyre-challenge/index.html",
-    "static/css/main.7bc5b48d.chunk.css.map": "/jyre-challenge/static/css/main.7bc5b48d.chunk.css.map",
+    "static/css/main.a79bca01.chunk.css.map": "/jyre-challenge/static/css/main.a79bca01.chunk.css.map",
     "static/js/2.3a141e08.chunk.js.LICENSE.txt": "/jyre-challenge/static/js/2.3a141e08.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e0bbebc6.js",
     "static/js/2.3a141e08.chunk.js",
-    "static/css/main.7bc5b48d.chunk.css",
-    "static/js/main.c9a33801.chunk.js"
+    "static/css/main.a79bca01.chunk.css",
+    "static/js/main.b1896851.chunk.js"
   ]
 }
