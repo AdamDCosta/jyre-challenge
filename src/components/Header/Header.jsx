@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <header className={styles.header}>
       <div className={styles.header__text}>
-        <h1 className={styles["header__text--title"]}>{headerTitle}</h1>
+        <h1 className={styles["header__text--title"]}>{headerTitle.toUpperCase()}</h1>
         <p className={styles["header__text--desc"]}>
           Bringing character to life, the 9 Leader types show the diversity of
           effective leadership styles.

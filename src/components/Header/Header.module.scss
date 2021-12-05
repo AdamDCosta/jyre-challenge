@@ -4,14 +4,16 @@
 .header {
   width: 100%;
   height: 25vh;
-  background-color: $color-secondary;
+  background-color: rgba($color-secondary, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 2px 5px 0px rgba(12,12,12,0.25);
+  box-shadow: 0px 2px 5px 0px rgba(12, 12, 12, 0.25);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 
   &__text {
-    width: 80%;
+    width: 100%;
     height: 100%;
     max-width: 1200px;
     display: flex;
@@ -20,13 +22,16 @@
     text-align: left;
     padding: 20px;
     color: $color-dark;
-    
+
+    @include desktop {
+      width: 80%;
+      height: 100%;
+      max-width: 1200px;
+    }
+
     &--title {
       padding-bottom: 10px;
       border-bottom: 1px solid $color-dark;
     }
-    
   }
-
-
 }
