@@ -9,37 +9,24 @@ var leader = _mockLeaders.mockLeader;
 global.fetch = jest.fn(function () {
   Promise.resolve({
     json: function json() {
-      return Promise.resolve(leader);
+      return Promise.resolve({
+        leader: leader
+      });
     }
   });
 });
 describe("Testing getLeaderData()", function () {
-  it("Should return the correct data from API", function _callee() {
+  // 
+  // it("Should return the correct data from API", async () => {
+  //   const fetchData = await getLeaderData();
+  //   expect(fetchData.types[0].name[0].text).toEqual("the Entrepreneurial leader");
+  //   expect(fetch).toHaveBeenCalledTimes(1);
+  // });
+  it("Should return null when data is not found", function _callee() {
     var fetchData;
     return regeneratorRuntime.async(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
-          case 0:
-            _context.next = 2;
-            return regeneratorRuntime.awrap((0, _leaderDB.getLeaderData)());
-
-          case 2:
-            fetchData = _context.sent;
-            expect(fetchData.types[0].name[0].text).toEqual("the Entrepreneurial leader");
-            expect(fetch).toHaveBeenCalledTimes(1);
-
-          case 5:
-          case "end":
-            return _context.stop();
-        }
-      }
-    });
-  });
-  it("Should return null when data is not found", function _callee2() {
-    var fetchData;
-    return regeneratorRuntime.async(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
           case 0:
             global.fetch = jest.fn(function () {
               return Promise.resolve({
@@ -50,16 +37,16 @@ describe("Testing getLeaderData()", function () {
                 }
               });
             });
-            _context2.next = 3;
+            _context.next = 3;
             return regeneratorRuntime.awrap((0, _leaderDB.getLeaderData)());
 
           case 3:
-            fetchData = _context2.sent;
+            fetchData = _context.sent;
             expect(fetchData).toBeNull();
 
           case 5:
           case "end":
-            return _context2.stop();
+            return _context.stop();
         }
       }
     });
