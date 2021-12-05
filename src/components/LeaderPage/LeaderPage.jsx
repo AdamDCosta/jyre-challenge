@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { link } from 'react-router-dom'
 import styles from "./LeaderPage.module.scss";
 import Card from "../Card/Card";
 import cross from "../../assets/images/white-cross.png";
+import LeaderPageLists from "./LeaderPageLists/LeaderPageLists";
 
 const LeaderPage = (props) => {
   const { leaders } = props;
@@ -70,22 +70,16 @@ const LeaderPage = (props) => {
     }
   }
 
-  const bestListJSX = leaderBestList.map((listItem, index) => {
-    return <li key={index + 1}>{listItem}</li>;
-  });
-
-  const darkListJSX = leaderDarkList.map((listItem, index) => {
-    return <li key={index + 1}>{listItem}</li>;
-  });
-
-  console.log(leaderBestTitle);
-
   return (
     <Card>
       <section className={styles["leader-page"]}>
-            <Link to="/">
-              <img className={styles["leader-page__cross"]} src={cross} alt="close window" />
-            </Link>
+        <Link to="/">
+          <img
+            className={styles["leader-page__cross"]}
+            src={cross}
+            alt="close window"
+          />
+        </Link>
         <div className={styles["leader-page__heading"]}>
           <div className={styles["leader-page__heading--text"]}>
             <h1
@@ -116,24 +110,14 @@ const LeaderPage = (props) => {
             {descriptionParagraph}
           </p>
         </article>
-        <article className={styles["leader-page__lists"]}>
-          <div
-            className={styles["leader-page__lists--best"]}
-            style={{ border: `1px solid ${leaderColour}` }}
-          >
-            <h4 style={{ backgroundColor: leaderColour }}>{leaderBestTitle}</h4>
-            <ul>{bestListJSX}</ul>
-          </div>
-          <div
-            className={styles["leader-page__lists--dark"]}
-            style={{ border: `1px solid ${leaderColour}` }}
-          >
-            <h4 style={{ backgroundColor: leaderColour }}>{leaderDarkTitle}</h4>
-            <ul>{darkListJSX}</ul>
-          </div>
-        </article>
+        <LeaderPageLists
+          leaderBestTitle={leaderBestTitle}
+          leaderDarkTitle={leaderDarkTitle}
+          leaderBestList={leaderBestList}
+          leaderDarkList={leaderDarkList}
+          leaderColour={leaderColour}
+        />
       </section>
-
     </Card>
   );
 };
