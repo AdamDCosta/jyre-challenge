@@ -3,8 +3,10 @@
 
 .leader-page {
   width: 100%;
+  max-width: 1200px;
   background-color: rgba($color-secondary, 0.75);
-  min-height: 100vh;
+  // min-height: 90vh;
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +29,14 @@
     align-items: center;
     padding: 10px;
     margin: 10px;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      height: 45vh;
+      gap: 20px;
+      max-width: 1024px;
+    }
     
     
     &--text {
@@ -34,13 +44,29 @@
       text-align: left;
       border-bottom: 1px solid $color-accent;
 
+      @include desktop {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
       &-title, &-quote, &-exemplar {
         padding-bottom: 10px;
+
+        @include desktop {
+          font-size: 2rem;
+          padding-bottom: 20px;
+        }
       }
 
       &-title {
         font-size: 2rem;
-        text-shadow: 1px 1px 2px rgba($color-dark, 0.5);
+        text-shadow: 1px 1px 2px rgba($color-dark, 0.2);
+      
+        @include desktop {
+          font-size: 3rem;
+        }
       }
 
       &-quote {
@@ -48,66 +74,48 @@
         color: $color-accent;
         font-weight: 400;
       }
-
     }
 
     &--image {
+
+      @include desktop {
+        height: 100%;
+        padding-left: 20px;
+      }
 
       img {
         width: 50%;
         border-radius: 10px;
         
+        @include desktop {
+          width: auto;
+          max-height: 100%;
+        }
       }
     }
   }
-
 
   &__character {
     
     padding: 10px;
     margin: 0 10px;
     text-align: left;
+    max-width: 1024px;
+
+    @include desktop {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
 
     &--title {
       padding-bottom: 10px;
+
+      @include desktop {
+        padding-bottom: 20px;
+      }
     }
    
   }
 
-  &__lists {
-    width: 100%;
-    margin: 10px 0 0 0;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    // background-color: rgba($color-dark, 0.1);
-    
-    &--best, &--dark {
-      height: 100%;
-      margin: 10px 0;
-      border-radius: 10px;
-      width: 45%;
-      text-align: left;
-      overflow: hidden;
-      
-      h4 {
-        padding: 10px 0 10px 10px;
-        width: 100%;
-      }
-      
-      ul {
-        list-style: inside;
-        padding: 10px;
-      }
   
-      li {
-        text-decoration: none;
-        padding-left: 10px;
-        color: $color-dark;
-      }
-    }
-
-
-  }
 }
