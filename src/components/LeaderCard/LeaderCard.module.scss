@@ -4,6 +4,8 @@
 .leader-card {
   height: 20vh;
   width: auto;
+  margin: auto;
+  aspect-ratio: 1;
   padding: 10px;
   background-color: rgba($color-secondary, 0.2);
   color: $color-dark;
@@ -16,7 +18,11 @@
   }
 
   @include tablet {
-    height: 25vh;
+    height: 22vh;
+  }
+
+  @include desktop-large {
+    height: 30vh;
   }
 
   &__image {

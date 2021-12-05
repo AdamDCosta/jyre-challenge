@@ -73,7 +73,7 @@ const LeaderPage = (props) => {
   return (
     <Card>
       <section className={styles["leader-page"]}>
-        <Link to="/">
+        <Link to="/jyre-challenge">
           <img
             className={styles["leader-page__cross"]}
             src={cross}

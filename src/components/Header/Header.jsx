@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Header.module.scss";
+import Button from "../Button/Button";
 
 const Header = (props) => {
   const { leaders } = props;
@@ -18,6 +19,7 @@ const Header = (props) => {
           Each one is underpinned by a unique combination of character
           strengths.
         </p>
+      <a href="#leaders"><Button buttonText="Explore"/></a>
       </div>
     </header>
   );

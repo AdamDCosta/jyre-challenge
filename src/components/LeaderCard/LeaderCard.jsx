@@ -6,7 +6,7 @@ const LeaderCard = (props) => {
   const { leader } = props;
 
   return (
-    <Link to={`/${leader.name[0].text}`} style={{textDecoration: "none"}}>
+    <Link to={`/jyre-challenge/${leader.name[0].text}`} style={{textDecoration: "none"}}>
       <article className={styles["leader-card"]}>
         <div className={styles["leader-card__image"]}>
           <img src={leader.exemplar_image.url} alt={leader.exemplar_image.alt} />

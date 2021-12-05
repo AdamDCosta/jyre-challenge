@@ -27,10 +27,10 @@ const App = () => {
     <Router>
       <div className={styles.app}>
         <Routes>
-          <Route exact path="/" element={<Home leaders={leaders} />} />
+          <Route exact path="/jyre-challenge" element={<Home leaders={leaders} />} />
 
           <Route
-            path="/:leaderName"
+            path="/jyre-challenge/:leaderName"
             element={<LeaderPage leaders={leaders} />}
           />
         </Routes>

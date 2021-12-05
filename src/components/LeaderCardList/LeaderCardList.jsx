@@ -12,7 +12,7 @@ const LeaderCardList = (props) => {
   });
 
   return (
-    <section className={styles.leaders}>
+    <section className={styles.leaders} id="leaders">
       <div className={styles["leaders__grid"]}>{leadersList}</div>
     </section>
   );
