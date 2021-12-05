@@ -16,6 +16,10 @@
   box-shadow: 2px 2px 10px 0px rgba(24,29,49,0.1);
   position: relative;
 
+  @include tablet {
+    padding: 20px 10px;
+  }
+
   &__cross {
     position: absolute;
     top: 10px;
@@ -27,7 +31,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px 10px 10px 10px;
     margin: 10px;
 
@@ -42,6 +46,7 @@
     
     &--text {
       
+      padding-bottom: 10px;
       text-align: left;
       border-bottom: 1px solid $color-accent;
 
@@ -99,13 +104,13 @@
   &__character {
     
     padding: 10px;
-    margin: 0 10px;
+    margin: 10px 10px;
     text-align: left;
     max-width: 1024px;
 
     @include desktop {
       font-size: 1.5rem;
-      margin: 20px 0;
+      margin: 20px 10px;
     }
 
     &--title {

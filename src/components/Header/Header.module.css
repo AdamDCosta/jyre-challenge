@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -17,11 +18,16 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+@media (min-width: 768px) {
+  .header {
+    height: 60vh;
+  }
+}
 .header a {
   width: 100px;
   text-decoration: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header a {
     width: 150px;
   }
@@ -37,23 +43,25 @@
   padding: 20px;
   color: #0c0c0c;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__text {
     width: 80%;
     height: 100%;
     max-width: 1200px;
+    margin: 1rem 1rem;
   }
 }
 .header__text--title {
   padding-bottom: 10px;
   border-bottom: 1px solid #0c0c0c;
+  font-weight: 700;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__text--title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header__text--desc {
     font-size: 1.5rem;
     width: 75%;

@@ -21,6 +21,10 @@
     height: 22vh;
   }
 
+  @include desktop {
+    height: 25vh
+  }
+
   @include desktop-large {
     height: 30vh;
   }

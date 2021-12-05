@@ -12,11 +12,16 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 
+
+  @include tablet {
+    height: 60vh;
+  }
+  
   a {
     width: 100px;
     text-decoration: none;
 
-    @include desktop {
+    @include tablet {
       width: 150px;
     }
   }
@@ -32,23 +37,25 @@
     padding: 20px;
     color: $color-dark;
 
-    @include desktop {
+    @include tablet {
       width: 80%;
       height: 100%;
       max-width: 1200px;
+      margin: 1rem 1rem;
     }
 
     &--title {
       padding-bottom: 10px;
       border-bottom: 1px solid $color-dark;
+      font-weight: 700;
 
-      @include desktop {
-        font-size: 3rem;
+      @include tablet {
+        font-size: 4rem;
       }
     }
     
     &--desc {
-      @include desktop {
+      @include tablet {
         font-size: 1.5rem;
         width: 75%;
       }
