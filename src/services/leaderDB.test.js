@@ -26,7 +26,7 @@ describe("Testing getLeaderData()", () => {
     // fetch.mockResponseOnce(JSON.stringify({data: "leader"}))
 
     const fetchData = await getLeaderData();
-    expect(fetchData[0].name.text).toEqual("the Entrepreneurial leader");
+    expect(fetchData.types[0].name[0].text).toEqual("the Entrepreneurial leader");
     expect(fetch).toHaveBeenCalledTimes(1);
   });
 
