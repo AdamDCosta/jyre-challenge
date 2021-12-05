@@ -1,0 +1,10 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(243,11,111);
+  background: linear-gradient(90deg, rgba(243,11,111,0.5) 10%, rgba(238,238,238,0.5) 50%, rgba(177,187,54,0.5) 82%);
+}
