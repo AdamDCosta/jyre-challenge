@@ -11,4 +11,4 @@ describe("Testing the button component", () => {
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   })
-})
+});  

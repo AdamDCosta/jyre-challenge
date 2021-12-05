@@ -4,22 +4,22 @@ var _leaderDB = require("./leaderDB");
 
 var _mockLeaders = require("../data/mockLeaders");
 
-var unmockedFetch = global.fetch;
+var _jestFetchMock = _interopRequireDefault(require("jest-fetch-mock"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var globalFetch = global.fetch;
 var leader = _mockLeaders.mockLeader;
-global.fetch = jest.fn(function () {
-  Promise.resolve({
-    json: function json() {
-      return Promise.resolve({
-        leader: leader
-      });
-    }
-  });
-});
 describe("Testing getLeaderData()", function () {
-  // 
   // it("Should return the correct data from API", async () => {
+  //   global.fetch = jest.fn(() => {
+  //       Promise.resolve({
+  //         json: async () =>
+  //            Promise.resolve({leader})
+  //       });
+  //     });
   //   const fetchData = await getLeaderData();
-  //   expect(fetchData.types[0].name[0].text).toEqual("the Entrepreneurial leader");
+  //   expect(fetchData.title[0].type).toEqual("heading1");
   //   expect(fetch).toHaveBeenCalledTimes(1);
   // });
   it("Should return null when data is not found", function _callee() {
@@ -50,8 +50,12 @@ describe("Testing getLeaderData()", function () {
         }
       }
     });
-  });
+  }); //   it("Should return the correct data from the API", async() => {
+  //     fetch.mockResponseOnce(JSON.stringify({ results: { data: "leader" }  }))
+  //     const leaderData = await getLeaderData();
+  //     expect(leaderData).toEqual({ data: "leader" })
+  //   })
 });
 afterAll(function () {
-  global.fetch = unmockedFetch;
+  global.fetch = globalFetch;
 });

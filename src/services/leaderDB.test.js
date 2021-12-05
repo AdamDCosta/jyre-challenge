@@ -1,27 +1,26 @@
 import { getLeaderData } from "./leaderDB";
 import { mockLeader } from "../data/mockLeaders";
+import fetch from 'jest-fetch-mock'
 
-const unmockedFetch = global.fetch
+const globalFetch = global.fetch
 
 const leader = mockLeader;
 
 
-  global.fetch = jest.fn(() => {
-      Promise.resolve({
-        json: () =>
-          Promise.resolve({leader})
-      });
-    });
 
 
 describe("Testing getLeaderData()", () => {
-
-  // 
-
+  
+  
   // it("Should return the correct data from API", async () => {
-
+  //   global.fetch = jest.fn(() => {
+  //       Promise.resolve({
+  //         json: async () =>
+  //            Promise.resolve({leader})
+  //       });
+  //     });
   //   const fetchData = await getLeaderData();
-  //   expect(fetchData.types[0].name[0].text).toEqual("the Entrepreneurial leader");
+  //   expect(fetchData.title[0].type).toEqual("heading1");
   //   expect(fetch).toHaveBeenCalledTimes(1);
   // });
 
@@ -33,9 +32,17 @@ describe("Testing getLeaderData()", () => {
 
     expect(fetchData).toBeNull();
   });
+
+//   it("Should return the correct data from the API", async() => {
+//     fetch.mockResponseOnce(JSON.stringify({ results: { data: "leader" }  }))
+
+//     const leaderData = await getLeaderData();
+//     expect(leaderData).toEqual({ data: "leader" })
+
+//   })
 });
 
 
 afterAll(() => {
-  global.fetch = unmockedFetch;
+  global.fetch = globalFetch;
 });

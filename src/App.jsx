@@ -4,9 +4,10 @@ import styles from "./App.module.scss";
 import Home from "./containers/Home/Home";
 import LeaderPage from "./components/LeaderPage/LeaderPage";
 import { getLeaderData } from "./services/leaderDB";
+import { mockLeader } from "./data/mockLeaders";
 
 const App = () => {
-  const [leaders, setLeaders] = useState(null);
+  const [leaders, setLeaders] = useState(mockLeader);
 
   useEffect(() => {
     const fetchLeaderData = async () => {
