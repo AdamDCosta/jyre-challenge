@@ -28,7 +28,7 @@ const LeaderPage = (props) => {
   let leaderBestList = [];
   let leaderDarkList = [];
 
-  // -- find index of last heading4, so that I can use this to split the two lists into seperate arrays -- 
+  // -- find index of last heading4, so that I can use this to split the two lists into seperate arrays --
 
   const descTypes = leaderDescription.map((desc) => {
     return desc.type;
@@ -68,12 +68,12 @@ const LeaderPage = (props) => {
   }
 
   const bestListJSX = leaderBestList.map((listItem, index) => {
-    return <li key={index + 1}>{listItem}</li>
-  })
+    return <li key={index + 1}>{listItem}</li>;
+  });
 
   const darkListJSX = leaderDarkList.map((listItem, index) => {
-    return <li key={index + 1}>{listItem}</li>
-  })
+    return <li key={index + 1}>{listItem}</li>;
+  });
 
   console.log(leaderBestTitle);
 
@@ -90,36 +90,41 @@ const LeaderPage = (props) => {
           <h2 className={styles["leader-page__heading--text-quote"]}>
             {leaderObject.quote}
           </h2>
-          <h3>{leaderObject.exemplar}</h3>
+          <h3 className={styles["leader-page__heading--text-exemplar"]}>
+            {leaderObject.exemplar}
+          </h3>
         </div>
-        <div className={styles["leader-page__heading--image"]}>
+        <figure className={styles["leader-page__heading--image"]}>
           <img
             src={leaderObject.exemplar_image.url}
             alt={leaderObject.exemplar_image.alt}
           />
-        </div>
+        </figure>
       </div>
       <article className={styles["leader-page__character"]}>
-        <h3>{descriptionTitle}</h3>
-        <p>{descriptionParagraph}</p>
+        <h3 className={styles["leader-page__character--title"]}>
+          {descriptionTitle}
+        </h3>
+        <p className={styles["leader-page__character--desc"]}>
+          {descriptionParagraph}
+        </p>
       </article>
-      <div
-        className={styles["leader-page__lists"]}
-        style={{ border: `1px solid ${leaderColour}` }}
-      >
-        <div>
-         <h4>{leaderBestTitle}</h4> 
-         <ul>
-           {bestListJSX}
-        </ul>  
+      <article className={styles["leader-page__lists"]}>
+        <div
+          className={styles["leader-page__lists--best"]}
+          style={{ border: `1px solid ${leaderColour}` }}
+        >
+          <h4 style={{ color: leaderColour }}>{leaderBestTitle}</h4>
+          <ul>{bestListJSX}</ul>
         </div>
-        <div>
-          <h4>{leaderDarkTitle}</h4>
-          <ul>
-            {darkListJSX}
-          </ul>
+        <div
+          className={styles["leader-page__lists--dark"]}
+          style={{ border: `1px solid ${leaderColour}` }}
+        >
+          <h4 style={{ color: leaderColour }}>{leaderDarkTitle}</h4>
+          <ul>{darkListJSX}</ul>
         </div>
-      </div>
+      </article>
     </section>
   );
 };
